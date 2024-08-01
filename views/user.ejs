@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form">
+      <form class="editUserForm">
+        <input id="userId" type="hidden" value="<%= user._id %>" />
+
+        <label for="username">Username</label><br />
+        <input
+          type="text"
+          name="username"
+          id="username"
+          required
+          value="<%= user.username %>"
+        />
+        <br />
+        <label for="role">role</label><br />
+        <input
+          type="text"
+          name="role"
+          id="role"
+          required
+          value="<%= user.role %>"
+        />
+        <br />
+        <!-- <button type="submit" onclick=editUser(<%= user._id %>) >save</button> -->
+        <button id="edit-user" type="submit">save</button>
+       
+      </form>
+    </div>
+  </body>
+  <script>
+    async function editUser(userId) {
+      const username = document.getElementById("username").value;
+      const role = document.getElementById("role").value;
+
+      try {
+        const userEditDetails = {
+          username: username,
+          role: role,
+        };
+        const resposne = await fetch(
+          `http://localhost:2004/admin/users/${userId}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify(userEditDetails),
+          }
+        );
+        if(resposne.redirected)
+        {
+          window.location.href = '/admin/users'
+        }
+      } catch (error) {
+        console.log("ERRPR", error);
+      }
+    }
+    document.addEventListener("DOMContentLoaded",  function () {
+      const saveButton = document.getElementById("edit-user");
+      saveButton.addEventListener("click", async function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        const userId = "<%= user._id %>";
+        await editUser(userId);
+      });
+    });
+
+
+    //     document.getElementById('editUserForm').addEventListener('submit', async function(event) {
+    //   event.preventDefault();
+
+    //   const userId = document.getElementById('userId').value;
+    //   const username = document.getElementById('username').value;
+    //   const role = document.getElementById('role').value;
+
+    //   try {
+    //     const response = await fetch(`/admin/users/${userId}`, {
+    //       method: 'PUT',
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify({ username, role })
+    //     });
+
+    //     if (response.ok) {
+    //       // Redirect to the admin users page
+    //       window.location.href = '/admin/users';
+    //     } else {
+    //       const error = await response.json();
+    //       alert(`Error: ${error.message}`);
+    //     }
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //     alert('An error occurred while updating the user.');
+    //   }
+    // });
+  </script>
+</html>

@@ -1,0 +1,352 @@
+body{
+  
+    margin: 0;
+    font-family: " Montserrat",sans-serif;
+    height: 100vh;
+    background: linear-gradient(150deg, #301F81 12.51%, #0F0441 89.53%);
+    /* background-color: #efeded; */
+  }
+  header{
+    /* background-color: lemonchiffon; */
+    padding: 10px;
+
+  }
+  section{
+        /* background: linear-gradient(150deg, #301F81 12.51%, #0F0441 89.53%); */
+
+    /* max-width: 1050px; */
+    /* margin: 0px auto; */
+  }
+  .header_logo h3{
+    margin: 0px;
+    font-weight: 700px;
+    font-size: 30px;
+    color: chocolate;
+  }
+  .header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search_bar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .search_bar input{
+    padding: 10px;
+    border-radius: 20px; 
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+
+  }
+  .header_btn{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  nav{
+    display: flex;
+    gap: 10px;
+  }
+  nav li{
+    list-style: none;
+  }
+   a h3{
+    color: chocolate;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+  }
+  .button{
+    color: white;
+    background-color: chocolate;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    display: flex;
+    gap: 15px;
+  }
+  .search_icon{
+    background-color: white;
+    /* padding: 10px; */
+    border-radius: 50px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border:1px solid grey;
+   
+  }
+  .search_icon i {
+    padding-left: 10px;
+  }
+  .hero_section{
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin: 0px 60px 0px 60px;
+    padding: 10px 20PX;
+    /* box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07); */
+    border-radius: 20px;
+
+
+  }
+  .content{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+  }
+  .content h2{
+    font-size: 54px;
+    margin: 0px;
+    font-weight: 700px;
+    color:white;
+  }
+  .content p {
+    margin: 0px;
+    font-size: 30px;
+    font-weight: 700px;
+    color: white;
+  }
+  .article_ul{
+    /* width: 100%; */
+    /* margin: 0px 25px; */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    
+  
+  }
+  li{
+     display: flex;
+    flex-direction: column;
+    
+    /* gap: 5px; */
+    font-size: 14px;
+    font-weight: 700;
+    color: grey;
+    /* margin-top: 15px; */
+    padding: 20px;
+    /* border:1px solid grey; */
+    box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    background-color: #FFF;
+  } 
+  h2{
+    margin: 0px;
+    /* font-size: 20px; */
+  }
+  .show_user{
+    font-size: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .show_user h2{
+    margin: 0;
+  }
+  .title{
+    font-size: 24px;
+  }
+  .post_header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .post_btn,button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    gap: 5px;
+  }.date{
+    margin-bottom: 10px;
+  }
+  .content_post{
+    width: 200px;           
+    
+    /* height: 50px;            */
+    overflow: hidden;       
+    white-space: nowrap;    
+    text-overflow: ellipsis;
+  }
+  .show_user span{
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+  .postId{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .article{
+    text-align: center;
+    height: 90vh;
+  }
+  .title_newPage{
+    font-size: 54px;
+  }
+  tbody{
+    display: flex;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 18px 15px 15px;
+    gap: 30px;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    display: none;
+    z-index: 2;
+    /* text-align: center; */
+    /* width: 50%; */
+    background-color: white;
+    /* margin-left:50px ; */
+  }
+  .form-control{
+    width: 95%;
+    padding: 15px;
+  }
+  .card_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    /* padding-top:30px ; */
+  
+  
+  }
+  .card_btn button{
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(176, 175, 175);
+    border-radius: 16px;
+    border: none;
+  }
+  .card_body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* justify-content: center;
+    align-items: center; */
+  }
+  .card-title{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+  }
+  .card-text{
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+  }
+  .card_body label{
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(5, 3, 11, 0.20);
+    top: 0;
+    display: none;
+    backdrop-filter: blur(3px);
+  }
+  .btn{
+    display: flex;
+    gap: 10px;
+  }
+  .delete_form h5{
+    color: #2B3674;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.delete_form button{
+    padding: 7px;
+    width: 37px;
+    height: 37px;
+    justify-content: center;
+    display: flex;
+    border: 1px solid transparent;
+    align-items: center;
+    border-radius: 10px;
+}
+.delete_form button i{
+    color: #4318FF;
+}
+.delete_form button:hover{
+    border-color: #4318FF;
+}
+.bottom{
+    justify-content: flex-end;
+}
+.delete_details{
+    width: 692px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 22px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    background-color: #FFF;
+    display: none;
+    z-index: 2;
+
+}
+.delete_details h6{
+    color: #2B3674;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.filled_btn{
+    background-color: #EB506C;
+}
+.buttonn{
+ display: flex;
+ justify-content: flex-end;
+ gap: 10px;
+}
+a{
+  text-decoration: none;
+}
+.li_Hover{
+  /* width: 300px; */
+  position: relative;
+  transition: 0.5s ease-in-out;
+ 
+}
+.li_Hover:hover{
+  transform: translateY(10px);
+}

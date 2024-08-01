@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_section">
+                <h2>Admin Pannel</h2>
+            </div>
+        </div>
+    </header>
+  <section>
+    <div class="container">
+      <h1>Posts by <%= user.username %></h1>
+        <div class="user_spc">
+            <ul class="article_ul" id="article_ul">
+                <% if(locals.post) {%> 
+                  <% post.forEach(post => { %>
+              
+                <li class="li">
+                  
+               
+                  <!-- <div class="post_header"> -->
+                    <span class="show_user">
+                      <span class="title"> <%= post.title %></span> <br>
+                    </span>
+      
+                    <div class="post_btn">
+                       
+                        <a href="/admin/post/<%= post._id %>"><button class="btn" id="viewBtn" >view</button></a>
+                     
+                    
+                     
+                   </div>
+                   <!-- </div> -->
+                </li> 
+                <% }) %> <% } %>
+              </ul>
+          
+        </div>
+    </div>
+  </section>
+  <div class="delete_details" id="deleteDetails" >
+    <div class="delete_form d-flex justify-content-between">
+        <h5>Delete Employee</h5>
+        <button onclick="closeBtn()"><i class="fa-solid fa-xmark"></i></button> 
+    </div>
+    <h6>Are you sure you want to delete this employee?</h6>
+    <div class="bottom d-flex">
+        <div class="button d-flex">
+            <button class="unfilled" onclick="closeBtn()">Cancel</button>
+            <button class=" filled_btn" id="deleteBtn" >Delete</button>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script>
+
+  
+  
+ 
+  // let cancelBtnEdit = document.getElementById("cancel");
+ 
+
+  // editBtn.addEventListener("click", () => {
+   
+   
+  // });
+
+  // cancelBtnEdit.addEventListener("click", () => {
+  //   cardedit.style.display = "none";
+  //   overlayedit.style.display = "none";
+  // });
+
+
+
+   
+  </script>
+</body>
+</html>
